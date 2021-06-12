@@ -29,6 +29,9 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
+                <div class="col-md-3 col-6-xl col mt-4">
+                    <a class="btn btn-primary" href="#reserveForm" role="button">Reserve Campsite</a>
+                </div>
             </div>
         </div>
     </header>
@@ -40,7 +43,9 @@
     <!-- data toggle & data target is how I selected my UL items to be in a dropdown menu on less than small screens -->
     <!-- ml-auto is a spacing utility class. I moved my button navbar to the right -->
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-        <div class="containter">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -56,39 +61,99 @@
     </nav>
 
 
+    <!-- Row 1 -->
     <div class="container">
         <div class="row row-content align-items-center">
-            <div class="col-sm-4 order-sm-last col-md-3">
-                <h2 class="text-sm-right">Discover & Review</h2>
-            </div>
             <div class="col">
-                <h3>Our Campsites</h3>
-                <p>Explore our growing database of curated campsites and leave your own reviews!</p>
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
+                    <div class="media-body align-self-center">
+                        <h3>Our Campsites</h3>
+                        <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
+                    </div>
+                    <div class="col-sm-4 col-md-3">
+                        <h2 class="text-sm-right">Discover & Review</h2>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- Row 2 -->
         <div class="row row-content align-items-center">
             <div class="col-sm-4 col-md-3">
                 <h2>Featured Campsites</h2>
             </div>
             <div class="col">
-                <h3>React Lake Campground</h3>
-                <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                <div class="media">
+                    <div class="media-body">
+                    <h3>React Lake Campground</h3>
+                    <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                    </div>
+                    <img class="d-flex ml-3" src="img/react-lake-thumb.jpg" alt="">
+                </div>
             </div>
         </div>
 
+        <!-- Row 3 -->
         <div class="row row-content align-items-center">
             <div class="col-sm-4 order-sm-last col-md-3">
-                <h2 class="text-sm-right">Our Community Partners</h2>
+                <h3 class="text-sm-right">Our Community Partners</h3>
             </div>
-            <div class="col"></div>
-                <h3>Bootstrap Outfitters</h3>
-                <p>Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+            <div class="col">
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
+                    <div class="media-body align-self-center">
+                        <h3>Bootstrap Outfitters</h3>
+        				<p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <footer>
+        <!-- Card / Forms -->
+
+        <div class="row row-content">
+            <div class="col-sm-6 mx-auto">
+                <div class="card">
+                    <h3 class="card-header bg-info">Reserve a Campsite</h3>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="row form-group">
+                                <label class="col-12 col-sm-6 col-form-label" for="campers">Number of Campers</label>
+                                <div class="col">
+                                    <select class="form-control" name="numCampers" id="numCampers">
+                                        <option value="">Select</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                        <option value="">5</option>
+                                        <option value="">6</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                                <div class="form-group row" id="reserveForm">
+                                    <label class="col-12 col-sm-6 col-form-label" for="date">Date</label>
+                                    <div class="col">
+                                        <input class="form-control" type="date" id="date" name="date" placeholder="date">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <button class="btn btn-primary" type="submit">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    <footer class="site-footer">
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-2 offset-1">
@@ -113,6 +178,8 @@
                 </div>
             </div>
         </div>
+        
+    </div>
 
     </footer>
 
