@@ -1,5 +1,6 @@
 body {
     font-family: "Open Sans", sans-serif;
+    background-color: rgb(255, 226, 199);
 }
 
 h1, h2, h3 {
@@ -45,4 +46,13 @@ header h2 {
     border: 1px solid #DDD;
     border-top: none;
     padding: 10px;
+}
+
+/* Carousel */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel {
+    border: solid #5637DD;
 }
